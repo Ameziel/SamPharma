@@ -1,0 +1,10 @@
+Amélioration :
+
+Faire une classe numéro de téléphone comprennant un :
+"+"
+indicatif
+série de chiffres
+
+Faire une classe e-mail avec expréssions régulières pour le contrôle de validité.
+
+ Si le nom ou le prénom comporte moins de 3 caractères.

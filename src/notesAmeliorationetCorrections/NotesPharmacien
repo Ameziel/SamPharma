@@ -1,0 +1,11 @@
+Problèmes éventuels :
+
+1) Conflit dans l'identifiant.
+    - Le peu d'employé fait que ce cas sera exclu.
+ Réponse proposé :
+ a-  Faire une requête à la base de donnée pour vérifier cela et générer
+     un identifiant à la création du pharmacien par le formulaire. (procédure stockée / séquence)
+ b - prendre un hashcode ou nombre aléatoire au niveau applicatif et l'attribuer
+        (rapide mais moins sur si on ne veut pas un identifiant à rallonge).
+
+ Si le nom ou le prénom comporte moins de 3 caractères.

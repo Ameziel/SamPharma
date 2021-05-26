@@ -1,0 +1,5 @@
+Amélioration :
+Faire une liste sous forme de constantes pour :
+- la forme pharmaceutique
+- la voie d'administration
+et la faire matcher avec l'IHM

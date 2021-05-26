@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane_connexion" prefHeight="772.0" prefWidth="1198.0" style="-fx-background-color: #F7FFFF;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleurs.C_vConnexion">
+   <children>
+      <ImageView fitHeight="766.0" fitWidth="636.0" layoutX="269.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../ressources/img/logo-pharma%20sans-texte-3%25.png" />
+         </image>
+      </ImageView>
+      <PasswordField fx:id="passwdf_connexion_password" layoutX="614.0" layoutY="418.0" />
+      <TextField fx:id="txtf_connexion_indentifiant" layoutX="614.0" layoutY="289.0" />
+      <Label fx:id="lbl_identifiant" layoutX="344.0" layoutY="281.0" style="-fx-font-weight: 900;" text="Identifiant" textFill="#31c0ae">
+         <font>
+            <Font size="28.0" />
+         </font></Label>
+      <Label fx:id="lbl_password" layoutX="315.0" layoutY="410.0" style="-fx-font-weight: 900;" text="Mot de Passe " textFill="#31c0ae">
+         <font>
+            <Font size="28.0" />
+         </font></Label>
+      <Label layoutX="382.0" layoutY="122.0" text="Sampharma : Connexion" textFill="#339966">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_connexion_connexion" layoutX="628.0" layoutY="558.0" mnemonicParsing="false" onAction="#verifLogin" pickOnBounds="false" prefHeight="80.0" prefWidth="200.0" style="-fx-font-weight: 800;" text="Connexion" textFill="#388aa5">
+         <font>
+            <Font size="28.0" />
+         </font></Button>
+      <Button fx:id="btn_connexion_inscription" depthTest="DISABLE" layoutX="298.0" layoutY="558.0" mnemonicParsing="false" pickOnBounds="false" prefHeight="80.0" prefWidth="200.0" style="-fx-font-weight: 800;" text="Inscription" textFill="#388aa5">
+         <font>
+            <Font size="28.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

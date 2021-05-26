@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchPane_ajoutermedicament" prefHeight="570.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleurs.C_vAjouterMedicament">
+   <children>
+      <Label fx:id="lbl_ajouterclient_nom" layoutX="116.0" layoutY="147.0" style="-fx-font-weight: 800;" text="idMedicament" textFill="#31c0ae">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextField fx:id="txtf_ajoutermedicament_idmedicament" layoutX="341.0" layoutY="145.0" />
+      <Button fx:id="btn_ajoutermedicament_confirm" layoutX="255.0" layoutY="477.0" mnemonicParsing="false" onAction="#validerAjoutMedicament" prefHeight="61.0" prefWidth="204.0" style="-fx-font-weight: 800;" text="Confirmer" textFill="#388aa5">
+         <font>
+            <Font size="28.0" />
+         </font></Button>
+      <Label fx:id="lbl_ajouterclient_nom1" layoutX="117.0" layoutY="192.0" style="-fx-font-weight: 800;" text="denomination" textFill="#31c0ae">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="lbl_ajouterclient_nom11" layoutX="117.0" layoutY="247.0" style="-fx-font-weight: 800;" text="forme pharmaceutique" textFill="#31c0ae">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="lbl_ajouterclient_nom111" layoutX="117.0" layoutY="306.0" style="-fx-font-weight: 800;" text="voie administration" textFill="#31c0ae">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="lbl_ajouterclient_nom1111" layoutX="117.0" layoutY="356.0" style="-fx-font-weight: 800;" text="molecule" textFill="#31c0ae">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="lbl_ajouterclient_nom11111" layoutX="117.0" layoutY="406.0" style="-fx-font-weight: 800;" text="prix vente" textFill="#31c0ae">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextField fx:id="txtf_ajoutermedicament_denomination" layoutX="341.0" layoutY="189.0" />
+      <TextField fx:id="txtf_ajoutermedicament_formepharmaceutique" layoutX="341.0" layoutY="244.0" />
+      <TextField fx:id="txtf_ajoutermedicament_molecule" layoutX="341.0" layoutY="353.0" />
+      <ComboBox fx:id="cmbx_ajoutermedicament_voieadministration" layoutX="341.0" layoutY="303.0" prefWidth="150.0" />
+      <TextField fx:id="txtf_ajoutermedicament_pvente" layoutX="341.0" layoutY="403.0" />
+      <Label layoutX="243.0" layoutY="41.0" prefHeight="45.0" prefWidth="228.0" text="Ajouter médicament" textFill="#18445c">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleurs.C_vGestMedicament">
+   <children>
+      <VBox fx:id="vBx_accueil_gauche" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" prefHeight="908.0" prefWidth="308.0" style="-fx-background-color: f7ffff;">
+         <children>
+            <ImageView fitHeight="325.0" fitWidth="309.0">
+               <image>
+                  <Image url="@../ressources/img/logo-pharma%20texte.png" />
+               </image>
+            </ImageView>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #4FADA6; -fx-font-weight: 900;" text="Client" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/img/S-client.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #4FADA6; -fx-font-weight: 900;" text="Medicament" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/img/S-pilule.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #4FADA6; -fx-font-weight: 900;" text="Pharmacien" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/img/S-pharmacien.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #4FADA6; -fx-font-weight: 900;" text="Commande" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/img/S-commande.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="308.0" prefHeight="908.0" prefWidth="1293.0">
+         <children>
+            <TableView fx:id="tblview_gestMedicament" layoutX="23.0" layoutY="293.0" onMouseClicked="#getItemSelected" prefHeight="466.0" prefWidth="1247.0">
+              <columns>
+                <TableColumn fx:id="tblcolumn_gestmedicament_idmedicament" minWidth="100.0" prefWidth="75.0" resizable="false" text="idmedicament" />
+                <TableColumn fx:id="tblcolumn_gestmedicament_denomination" minWidth="200.0" prefWidth="227.0" resizable="false" text="denomination" />
+                  <TableColumn fx:id="tblcolumn_gestmedicament_formepharmaceutique" minWidth="196.0" prefWidth="196.0" resizable="false" text="formepharmaceutique" />
+                  <TableColumn fx:id="tblcolumn_gestmedicament_voieadministration" minWidth="186.0" prefWidth="186.0" resizable="false" text="voieadministration" />
+                  <TableColumn fx:id="tblcolumn_gestmedicament_molecule" minWidth="177.0" prefWidth="177.0" resizable="false" text="molecule" />
+                  <TableColumn fx:id="tblcolumn_gestmedicament_pvente" prefWidth="149.0" text="pvente" />
+                  <TableColumn fx:id="tblcolumn_gestmedicament_stockdisponible" prefWidth="160.0" text="stockdisponible" />
+              </columns>
+            </TableView>
+            <Button fx:id="btn_gestmedicament_ajoutermedicament" layoutX="23.0" layoutY="227.0" mnemonicParsing="false" onAction="#ouvrirFenetreAjouterMedicament" prefHeight="40.0" prefWidth="120.0" style="-fx-font-weight: 600;" text="Ajouter" textFill="#388aa5">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="btn_gestmedicament_affichermedicaments" layoutX="178.0" layoutY="227.0" mnemonicParsing="false" onAction="#afficherTousLesMedicaments" prefHeight="40.0" prefWidth="139.0" style="-fx-font-weight: 600;" text="Afficher tout" textFill="#388aa5">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="btn_gestmedicament_supprimermedicament" layoutX="382.0" layoutY="227.0" mnemonicParsing="false" onAction="#supprimerMedicament" prefHeight="40.0" prefWidth="120.0" style="-fx-font-weight: 600;" text="Supprimer" textFill="#388aa5">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="btn_gestmedicament_retourAccueil" layoutX="72.0" layoutY="784.0" mnemonicParsing="false" onAction="#retourAccueil" prefHeight="80.0" prefWidth="212.0" style="-fx-font-weight: 800;" text="&lt; Accueil" textFill="#388aa5">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Label layoutX="490.0" layoutY="106.0" prefHeight="40.0" prefWidth="277.0" text="Gestion Medicament">
+               <font>
+                  <Font size="28.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

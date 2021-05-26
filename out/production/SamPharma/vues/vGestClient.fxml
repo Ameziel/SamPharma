@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleurs.C_vGestClient">
+   <children>
+      <Button layoutX="149.0" layoutY="763.0" mnemonicParsing="false" text="Deconnexion" />
+      <VBox fx:id="vBx_accueil_gauche" maxHeight="1.7976931348623157E308" prefHeight="908.0" prefWidth="308.0" style="-fx-background-color: f7ffff;">
+         <children>
+            <ImageView fitHeight="325.0" fitWidth="309.0">
+               <image>
+                  <Image url="@../ressources/img/logo-pharma%20texte.png" />
+               </image>
+            </ImageView>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #4FADA6; -fx-font-weight: 900;" text="Client" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/img/S-client.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #4FADA6; -fx-font-weight: 900;" text="Medicament" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/img/S-pilule.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #4FADA6; -fx-font-weight: 900;" text="Pharmacien" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/img/S-pharmacien.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #4FADA6; -fx-font-weight: 900;" text="Commande" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ressources/img/S-commande.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="308.0" prefHeight="908.0" prefWidth="1243.0">
+         <children>
+            <TableView fx:id="tblview_gestClient" layoutX="72.0" layoutY="293.0" onMouseClicked="#getItemSelected" prefHeight="466.0" prefWidth="1150.0">
+              <columns>
+                <TableColumn fx:id="tblcolumn_gestclient_idclient" minWidth="230.0" prefWidth="75.0" resizable="false" text="idclient" />
+                <TableColumn fx:id="tblcolumn_gestclient_nom" minWidth="230.0" prefWidth="75.0" resizable="false" text="nom" />
+                  <TableColumn fx:id="tblcolumn_gestclient_prenom" minWidth="230.0" prefWidth="75.0" resizable="false" text="prenom" />
+                  <TableColumn fx:id="tblcolumn_gestclient_gsm" minWidth="230.0" prefWidth="75.0" resizable="false" text="gsm" />
+                  <TableColumn fx:id="tblcolumn_gestclient_email" minWidth="230.0" prefWidth="75.0" resizable="false" text="email" />
+              </columns>
+            </TableView>
+            <Button fx:id="btn_gestclient_ajouterclient" layoutX="72.0" layoutY="199.0" mnemonicParsing="false" onAction="#ouvrirFenetreAjouterClient" prefHeight="40.0" prefWidth="120.0" style="-fx-font-weight: 600;" text="Ajouter" textFill="#388aa5">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="btn_gestclient_afficherclients" layoutX="217.0" layoutY="199.0" mnemonicParsing="false" onAction="#afficherToutLesClients" prefHeight="40.0" prefWidth="135.0" style="-fx-font-weight: 600;" text="Afficher tout" textFill="#388aa5">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <TextField fx:id="txtf_gestclient_rechercherclient" layoutX="811.0" layoutY="192.0" prefHeight="40.0" prefWidth="250.0" />
+            <Button fx:id="btn_gestclient_rechercherclient" layoutX="1079.0" layoutY="192.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" style="-fx-font-weight: 600;" text="Rechercher" textFill="#388aa5">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="btn_gestclient_supprimerclient" layoutX="365.0" layoutY="199.0" mnemonicParsing="false" onAction="#supprimerClient" prefHeight="40.0" prefWidth="120.0" style="-fx-font-weight: 600;" text="Supprimer" textFill="#388aa5">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="btn_gestclient_modifierclient" layoutX="1079.0" layoutY="252.0" mnemonicParsing="false" onAction="#modifierClient" prefHeight="40.0" prefWidth="120.0" text="Modifier" />
+            <Button fx:id="btn_gestclient_retourAccueil" layoutX="72.0" layoutY="783.0" mnemonicParsing="false" onAction="#retourAccueil" prefHeight="80.0" prefWidth="212.0" style="-fx-font-weight: 800;" text="&lt; Accueil" textFill="#388aa5">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Label layoutX="542.0" layoutY="93.0" text="Gestion Client">
+               <font>
+                  <Font size="34.0" />
+               </font></Label>
+            <TextField fx:id="txtf_gestclient_modifnom" layoutX="143.0" layoutY="259.0" />
+            <TextField fx:id="txtf_gestclient_modifprenom" layoutX="411.0" layoutY="259.0" />
+            <TextField fx:id="txtf_gestclient_modifemail" layoutX="905.0" layoutY="259.0" />
+            <TextField fx:id="txtf_gestclient_modifgsm" layoutX="647.0" layoutY="259.0" />
+            <Label fx:id="lbl_gestclient_nom" layoutX="72.0" layoutY="263.0" text="Nom :" />
+            <Label fx:id="lbl_gestclient_email" layoutX="836.0" layoutY="263.0" text="email :" />
+            <Label fx:id="lbl_gestclient_gsm" layoutX="595.0" layoutY="263.0" text="GSM :" />
+            <Label fx:id="lbl_gestclient_prenom" layoutX="328.0" layoutY="263.0" text="Prenom :" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,11 @@
+
+
+Pour ce qui est de la variable TAILLE_DECOUPAGE répétée dans plusieurs classe
+nous aurions pu créer une classe utilitaire possédant ces variables... Cependant une petite redondance pour éviter
+une classe avec peut-être pas beaucoup plus d'intérêt que ça... A voir.
+
+Le prix d'achat a été enlevé pour faire plus simple sur les contraintes d'achat et de vérification des prix.
+
+/ ! \ Si l'on veut supprimer une commande qui n'existe pas (par exemple dans la classe pharmaicen) est ce que ça lève
+une exception ? Est ce que l'on ne peut pas supprimer toutes les exceptions si l'on a une IHM et qu'on empeche les erreurs ?
+Et du coup nous n'avons pas d'exception à créer.

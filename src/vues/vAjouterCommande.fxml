@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleurs.VAjouterCommande">
+   <children>
+      <Label layoutX="599.0" layoutY="73.0" text="Ajouter Commande" textFill="#18445c">
+         <font>
+            <Font size="48.0" />
+         </font></Label>
+      <ComboBox fx:id="cmbbox_ajoutercommande_idclient" layoutX="287.0" layoutY="383.0" prefWidth="150.0" />
+      <Label layoutX="309.0" layoutY="324.0" style="-fx-font-weight: 800;" text="Choisir Client" textFill="#31c0ae">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <Label layoutX="649.0" layoutY="324.0" style="-fx-font-weight: 800;" text="Medicament" textFill="#31c0ae">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <Label layoutX="1012.0" layoutY="324.0" style="-fx-font-weight: 800;" text="Quantite" textFill="#31c0ae">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <ComboBox fx:id="cmbbox_ajoutercommande_idmedicament" layoutX="580.0" layoutY="383.0" prefHeight="25.0" prefWidth="274.0" />
+      <ComboBox fx:id="cmbbox_ajoutercommande_quantitemedicament" layoutX="972.0" layoutY="383.0" prefWidth="150.0" />
+      <Button fx:id="btn_ajoutercommande_ajouterlignecommande" layoutX="1269.0" layoutY="366.0" mnemonicParsing="false" onAction="#ajouterLigneCommande" prefHeight="59.0" prefWidth="185.0" style="-fx-font-weight: 800;" text="Ajouter Ligne Commande" textFill="#388aa5">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <Label layoutX="825.0" layoutY="837.0" style="-fx-font-weight: 800;" text="Total :">
+         <font>
+            <Font size="19.0" />
+         </font></Label>
+      <TableView fx:id="tblview_ajoutercommande" layoutX="333.0" layoutY="557.0" prefHeight="257.0" prefWidth="731.0">
+        <columns>
+          <TableColumn fx:id="tblcolumn_gestCommande_idmedicament" prefWidth="115.0" text="idmedicament" />
+          <TableColumn fx:id="tblcolumn_gestCommande_denomination" prefWidth="179.0" text="denomination" />
+            <TableColumn fx:id="tblcolumn_gestCommande_quantite" prefWidth="135.0" text="quantite" />
+            <TableColumn fx:id="tblcolumn_gestCommande_prixunitaire" prefWidth="141.0" text="prixunitaire" />
+            <TableColumn fx:id="tblcolumn_gestCommande_soustotal" prefWidth="158.0" text="soustotal" />
+        </columns>
+      </TableView>
+      <Button fx:id="btn_ajoutercommande_confirm" layoutX="1153.0" layoutY="627.0" mnemonicParsing="false" onAction="#ajouterCommande" prefHeight="134.0" prefWidth="339.0" style="-fx-font-weight: 800;" text="Terminer Commande" textFill="#388aa5">
+         <font>
+            <Font size="28.0" />
+         </font></Button>
+      <Separator layoutX="106.0" layoutY="186.0" prefHeight="5.0" prefWidth="1369.0" />
+      <Label fx:id="lbl_ajoutercommande_total" layoutX="978.0" layoutY="837.0" prefHeight="17.0" prefWidth="88.0" style="-fx-font-weight: 800;" text="0.00">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
