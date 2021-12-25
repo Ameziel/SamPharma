@@ -3,9 +3,7 @@
  */
 package controleurs;
 
-import dao.DAOFactory;
-import daoimplements.PharmacienDAO;
-import exceptions.ErrIdentificationPharmacien;
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -15,14 +13,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import modeles.Pharmacien;
-import vues.MyAlert;
+
 
 import java.io.IOException;
 import java.net.URL;
@@ -93,22 +89,22 @@ public class C_vConnexion extends Application implements Initializable {
 
 
     public void verifLogin(ActionEvent actionEvent) {
-        //ouvrirFenetreAccueil((Stage) ((Node) actionEvent.getSource()).getScene().getWindow()); // pour zapper la co
-        MyAlert monalerte;
-        if (saisieLoginOk()) {
-            try {
-                PharmacienDAO pharmacien = DAOFactory.getPharmacienDAO();
-                pharmacien.login(txtf_connexion_indentifiant.getText().toLowerCase().trim(), passwdf_connexion_password.getText());
-                id_pharmacien = txtf_connexion_indentifiant.getText().toLowerCase().trim();
-                ouvrirFenetreAccueil((Stage) ((Node) actionEvent.getSource()).getScene().getWindow());
-            } catch (ErrIdentificationPharmacien e) {
-                monalerte = new MyAlert(Alert.AlertType.INFORMATION, ERR_TITRE_BOITE_CONNEXION, ERR_CONTENU_BOITE_CONNEXION);
-                monalerte.afficherAlert();
-            }
-        } else {
-            monalerte = new MyAlert(Alert.AlertType.WARNING, ERR_TITRE_BOITE_CONNEXION, ERR_CHAMPS_VIDES);
-            monalerte.afficherAlert();
-        }
+        ouvrirFenetreAccueil((Stage) ((Node) actionEvent.getSource()).getScene().getWindow()); // pour zapper la co
+//        MyAlert monalerte;
+//        if (saisieLoginOk()) {
+//            try {
+//                PharmacienDAO pharmacien = DAOFactory.getPharmacienDAO();
+//                pharmacien.login(txtf_connexion_indentifiant.getText().toLowerCase().trim(), passwdf_connexion_password.getText());
+//                id_pharmacien = txtf_connexion_indentifiant.getText().toLowerCase().trim();
+//                ouvrirFenetreAccueil((Stage) ((Node) actionEvent.getSource()).getScene().getWindow());
+//            } catch (ErrIdentificationPharmacien e) {
+//                monalerte = new MyAlert(Alert.AlertType.INFORMATION, ERR_TITRE_BOITE_CONNEXION, ERR_CONTENU_BOITE_CONNEXION);
+//                monalerte.afficherAlert();
+//            }
+//        } else {
+//            monalerte = new MyAlert(Alert.AlertType.WARNING, ERR_TITRE_BOITE_CONNEXION, ERR_CHAMPS_VIDES);
+//            monalerte.afficherAlert();
+//        }
     }
 
     public void ouvrirFenetreAccueil(Stage stage) {

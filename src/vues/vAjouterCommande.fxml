@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleurs.VAjouterCommande">
+<AnchorPane prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controleurs.C_VAjouterCommande">
    <children>
       <Label layoutX="599.0" layoutY="73.0" text="Ajouter Commande" textFill="#18445c">
          <font>

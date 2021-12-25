@@ -1,17 +1,10 @@
 /*
- * VAjouterCommande.java
+ * C_VAjouterCommande.java
  */
 package controleurs;
 
 import dao.DAOFactory;
 import exceptions.ErrObjetInexistant;
-import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -30,7 +23,7 @@ import java.util.ResourceBundle;
  * @author Samuel Sicard
  * @version 0.9
  */
-public class VAjouterCommande implements Initializable {
+public class C_VAjouterCommande implements Initializable {
 
 
     @FXML
@@ -71,7 +64,7 @@ public class VAjouterCommande implements Initializable {
     }
 
     private void chargerQuantite() {
-        for(int i = 1 ; i < 10; i++) {
+        for(int i = 1 ; i < 15; i++) {
             cmbbox_ajoutercommande_quantitemedicament.getItems().add(i);
         }
     }

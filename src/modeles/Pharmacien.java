@@ -88,12 +88,12 @@ public class Pharmacien {
      * @param arg_email            : E-mail du pharmacien.
      */
     public Pharmacien(String arg_prenomPharmacien, String arg_nomPharmacien, String arg_mdp, String arg_gsm, String arg_email) {
-        this.prenomPharmacien = arg_prenomPharmacien;
-        this.nomPharmacien = arg_nomPharmacien;
-        this.mdpPharmacien = arg_mdp;
-        this.gsmPharmacien = arg_gsm;
-        this.emailPharmacien = arg_email;
-        this.idPharmacien = constructionIdentifiantPharmacien();
+        this.prenomPharmacien    = arg_prenomPharmacien;
+        this.nomPharmacien       = arg_nomPharmacien;
+        this.mdpPharmacien       = arg_mdp;
+        this.gsmPharmacien       = arg_gsm;
+        this.emailPharmacien     = arg_email;
+        this.idPharmacien        = constructionIdentifiantPharmacien();
         this.commandesPharmacien = new ArrayList<>();
     }
 

@@ -13,6 +13,7 @@ import java.sql.SQLException;
  * @version 0.9
  */
 public class ConnectionBD {
+
     private static volatile ConnectionBD co_unique = null;
 
     private String url = "jdbc:mysql://localhost:3306/sampharmacie?autoReconnect=true&useSSL=false";

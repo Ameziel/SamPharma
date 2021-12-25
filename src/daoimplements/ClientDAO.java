@@ -200,7 +200,6 @@ public class ClientDAO implements DAO<Client, String> {
         try {
             Statement s = connexion.createStatement();
             ResultSet result = s.executeQuery(requete);
-            ResultSetMetaData result_meta = result.getMetaData();
             while (result.next()) {
                 Client c = new Client();
                 c.setIdClient(result.getString("idclient"));
@@ -208,7 +207,6 @@ public class ClientDAO implements DAO<Client, String> {
                 c.setPrenomClient(result.getString("prenom"));
                 c.setNumGSM(result.getString("gsm"));
                 c.setEmail(result.getString("email"));
-                System.out.println();
                 clients.add(c);
             }
             result.close();
